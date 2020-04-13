@@ -63,6 +63,13 @@ defmodule MyAppWeb do
     end
   end
 
+  def live_view do
+    quote do
+      use Phoenix.LiveView,
+        layout: {MyAppWeb.LayoutView, "live.html"}
+    end
+  end
+
   @doc """
   When used, dispatch to the appropriate controller/view/etc.
   """
